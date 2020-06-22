@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <meta charset="uft-8" />
+
+    <title>Blog do Elisson e Rodrigo</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <main id="app" class="mt-auto flex-shrink-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="title">Blog do Elisson e Rodrigo</h1>
+          </div>
+        </div>
+        <div class="row body-blog">
+          <div class="col-8 card" v-for="post in posts">
+            <div class="col-11 card-title">
+              <div class="view-title">
+                <h3 class="title-post">{{ post.title }}</h3>
+              </div>
+            </div>
+
+            <div class="col-12 card-img">
+              <div class="view-img">
+                <img class="col-12 img-post" v-bind:src="post.image" />
+              </div>
+            </div>
+
+            <div class="col-12 card-body">
+              <div class="body-post">
+                {{ post.body }}
+              </div>
+
+              <div class="like-post">
+                <p>Curtidas:</p>
+                <p>{{ post.likes }}</p>
+                <a v-on:click="curtir()">Curtir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

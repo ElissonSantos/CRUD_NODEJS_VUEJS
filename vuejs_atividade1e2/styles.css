@@ -1,0 +1,68 @@
+.title {
+  text-align: center;
+  margin: 5;
+  padding: 30;
+  font-weight: bold;
+  color: snow;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.body-blog {
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+.card-title {
+  position: absolute;
+  z-index: 2;
+}
+
+.card-img {
+  position: relative;
+  z-index: 1;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.view-title {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: flex-end;
+}
+
+.view-img {
+  height: 300px;
+}
+
+.title-post {
+  font-size: 30px;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.img-post {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body-post {
+  text-align: justify;
+  padding: 15px;
+}
+
+.like-post {
+  text-align: justify;
+  padding: 15px;
+}
