@@ -2,6 +2,8 @@ var vue = new Vue({
   el: "#app",
   data: {
     posts: [],
+    urlPost: "http://localhost:3000/posts",
+    urlLikes: "http://localhost:3000/likes",
   },
   methods: {
     loadPosts() {
@@ -12,7 +14,7 @@ var vue = new Vue({
           this.posts = objeto;
         }
       };
-      httpRequest.open("GET", "http://localhost:3000/posts", true);
+      httpRequest.open("GET", this.urlPost, true);
       httpRequest.send(null);
     },
     likePost(id) {
@@ -22,10 +24,14 @@ var vue = new Vue({
           this.loadPosts();
         }
       };
-      httpRequest.open("PUT", "http://localhost:3000/likes", true);
-      httpRequest.send({ id });
+      httpRequest.open("PUT", this.urlLikes, true);
+
+      httpRequest.responseType = "json";
+
+      httpRequest.setRequestHeader("Content-Type", "application/json");
+
+      httpRequest.send(JSON.stringify({ id: id }));
     },
   },
 });
 vue.loadPosts();
-vue.likePost("df805cb4");

@@ -23,7 +23,15 @@
           </div>
         </div>
         <div class="row body-blog">
-          <div class="col-8 card" v-for="post in posts">
+          <div class="col-8 card" v-if="posts.length === 0">
+            <div class="col-12 card-body">
+              <div class="body-post">
+                Não há nenhuma postagem cadastrada.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-8 card" v-if="posts.length > 0" v-for="post in posts">
             <div class="col-11 card-title">
               <div class="view-title">
                 <h3 class="title-post">{{ post.title }}</h3>
@@ -42,9 +50,9 @@
               </div>
 
               <div class="like-post">
-                <p>Curtidas:</p>
-                <p>{{ post.likes }}</p>
-                <a v-on:click="curtir()">Curtir</a>
+                <p class="curtidas">Curtidas:</p>
+                <p class="number-likes">{{ post.likes }}</p>
+                <p class="curtir" v-on:click="likePost(post.id)">Curtir</p>
               </div>
             </div>
           </div>

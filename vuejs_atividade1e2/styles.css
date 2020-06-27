@@ -66,3 +66,31 @@
   text-align: justify;
   padding: 15px;
 }
+
+.like-post {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.curtidas {
+  margin-right: 10px;
+  font-size: small;
+}
+
+.number-likes {
+  margin-right: 10px;
+  font-size: x-large;
+  font-weight: bold;
+  color: crimson;
+}
+
+.curtir {
+  font-weight: bold;
+  font-size: medium;
+  color: blue;
+}
+
+.curtir:hover {
+  cursor: pointer;
+}
