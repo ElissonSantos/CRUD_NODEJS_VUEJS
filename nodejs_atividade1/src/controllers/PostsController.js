@@ -41,7 +41,7 @@ module.exports = {
     await connection("posts").where("id", id).delete();
     await connection("likes").where("post_id", id).delete();
 
-    return response.status(204).send();
+    return response.send();
   },
 
   async get(request, response) {

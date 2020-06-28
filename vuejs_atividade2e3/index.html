@@ -18,11 +18,18 @@
     <main id="app" class="mt-auto flex-shrink-0">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h1 class="title">Blog do Elisson e Rodrigo</h1>
+          <div class="col-12 title">
+            <h1>Blog do Elisson e Rodrigo</h1>
+            <div class="footer">
+              <p v-if="!editPost" v-on:click="editar()">
+                Novo Post
+              </p>
+            </div>
           </div>
         </div>
-        <div class="row body-blog">
+
+        <!-- Body Home -->
+        <div v-if="editPost === false" class="row body-blog">
           <div class="col-8 card" v-if="posts.length === 0">
             <div class="col-12 card-body">
               <div class="body-post">
@@ -54,6 +61,49 @@
                 <p class="number-likes">{{ post.likes }}</p>
                 <p class="curtir" v-on:click="likePost(post.id)">Curtir</p>
               </div>
+            </div>
+
+            <div class="footer">
+              <p class="editar" v-on:click="editar(post.id)">Editar</p>
+              <p class="excluir" v-on:click="deletePosts(post.id)">Excluir</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Body Edit/New Poste-->
+        <div v-if="editPost === true" class="row body-blog">
+          <div class="col-8 card">
+            <div class="inputArea">
+              <p>Titulo:</p>
+              <input
+                placeholder="Titulo da Postagem"
+                type="text"
+                v-model="post.title"
+              />
+            </div>
+            <div class="inputArea">
+              <p>Corpo:</p>
+              <textarea
+                placeholder="Corpo da Postagem"
+                v-model="post.body"
+              ></textarea>
+            </div>
+            <div class="inputArea">
+              <p>Imagem:</p>
+              <input
+                placeholder="URL da Imagem"
+                type="text"
+                v-model="post.image"
+              />
+            </div>
+            <div class="buttons">
+              <button
+                class="cancelar"
+                v-on:click="loadPosts(); editPost = false;"
+              >
+                Cancelar
+              </button>
+              <button class="salvar" v-on:click="savePost()">Salvar</button>
             </div>
           </div>
         </div>

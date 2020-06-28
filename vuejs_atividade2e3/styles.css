@@ -1,0 +1,178 @@
+.title {
+  text-align: center;
+  margin: 5;
+  padding: 30px 30px 0px 30px;
+  font-weight: bold;
+  color: snow;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.body-blog {
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  padding-top: 30px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+.card-title {
+  position: absolute;
+  z-index: 2;
+}
+
+.card-img {
+  position: relative;
+  z-index: 1;
+}
+
+.card-body {
+  padding: 20px 20px 0px 20px;
+}
+
+.view-title {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: flex-end;
+}
+
+.view-img {
+  height: 300px;
+}
+
+.title-post {
+  font-size: 30px;
+  padding-left: 20px;
+  font-weight: bold;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.img-post {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body-post {
+  text-align: justify;
+  padding: 15px;
+}
+
+.like-post {
+  text-align: justify;
+  padding: 15px 15px 0px 15px;
+}
+
+.like-post {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.curtidas {
+  margin-right: 10px;
+  font-size: small;
+}
+
+.number-likes {
+  margin-right: 10px;
+  font-size: x-large;
+  font-weight: bold;
+  color: crimson;
+}
+
+.curtir {
+  font-weight: bold;
+  font-size: medium;
+  color: blue;
+}
+
+.curtir:hover {
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0px;
+  padding: 0px;
+}
+
+.title h1 {
+  margin-bottom: 30px;
+}
+
+.footer p {
+  font-size: small;
+}
+
+.footer p:hover {
+  cursor: pointer;
+}
+
+.excluir {
+  font-weight: bold;
+  font-size: small;
+  color: red;
+  margin-right: 15px;
+}
+
+.excluir:hover {
+  cursor: pointer;
+}
+
+.editar {
+  font-weight: bold;
+  font-size: small;
+  color: green;
+  margin-right: 15px;
+}
+
+.editar:hover {
+  cursor: pointer;
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.inputArea p {
+  text-align: end;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.inputArea input,
+textarea {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  justify-content: flex-end;
+}
+
+.buttons .cancelar {
+  color: white;
+  background-color: #f86767;
+  border: none;
+  margin-right: 20px;
+}
+
+.buttons .salvar {
+  color: white;
+  background-color: #12a105;
+  border: none;
+  padding: 8px;
+}
